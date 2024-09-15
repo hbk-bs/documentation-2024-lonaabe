@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>teachable-machine</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h2>Teachable Machine </h2>
+    <section class="text-container">
+<h3>Was ist eine Teachable Machine</h3>
+   <p> Teachable Machine ist ein webbasiertes Tool von Google, welches die Erstellung von Modellen für maschinelles Lernen ohne tiefgehende Programmierkenntnisse ermöglicht. Das Interface der google Teachable Machine ist sehr verständlich designt. Die Modelle können anhand von Bildern, Tönen oder Posen trainiert werden und daraufhin kann der Code genutzt und weiterverwendet werden. Wird ein Modell anhand von Bildern trainiert, so braucht es einen Datensatz aus Bildern, damit werden die Klassen trainiert. Möchte man ein Model trainieren, welches Motive von Bildern oder Aufnahmen differenzieren kann, werden mind. 2 Klassen trainiert. Eine Klasse wird mit Datensätzen einer Art Motiven trainiert und die weitere Klasse mit Datensätzen des anderen Motivs. Nach erfolgreich abgeschlossenem Trainieren des Modells, müsste die Teachable Machine anhand der verschieden trainierten Klassen, die beiden Motive prozentual differenzieren können. Die erstellten Modelle können in Webseiten und Anwendungen integriert oder für den weiteren Gebrauch heruntergeladen werden.  </p>
+   <hr style="border: 2.5px solid rgba(83, 172, 162, 0.273);">
+   <h3>Der Prozess</h3>
+   <p>Für mein Color-Pose-Game wurde, die google Teachable Machine verwendet. Das Model wurde mit Posen-Datensätzen trainiert, welche durch die Webcam gesammelt wurden. Die Idee hinter dem Color-Pose-Game war es, eine Art Spiel zu programmieren, worin jede Pose einem Blauton zugeordnet ist und je nach Blauton passend posieren muss. Hierbei sind die Blautöne nah beieinander. Die Ideenfindung hierbei fiel mir sehr schwer, da es viele Möglichkeiten gab die Teachable Machine zu nutzen, was für Programmieranfänger etwas überfordernd sein könnte.</p>
+   <hr style="border: 2.5px solid rgba(83, 172, 162, 0.273);">
+   <h3>Der Datensatz</h3> 
+   <p>Der Datensatz wurde mit der Webcam gesammelt. Hierbei war es wichtig so viele Bilder wie möglich aufzunehmen, von einer Pose. Ich hatte insgesamt 4 Posen und somit auch vier Klassen welche trainiert werden müssen. Den Klassen habe ich die Namen der verschiedenen Blautöne gegeben, wie bspw. hellblau, dunkelblau, blau und mittleres Blau.</p>
+   <hr style="border: 2.5px solid rgba(83, 172, 162, 0.273);">
+   <h3>Schwierigkeiten und Fehler</h3> 
+   <p>Der erste Fehler, welcher die Umsetzung des Projekts gestört hatte, war, dass die Posen zu strickt gefolgt wurden. Wichtig ist es, dass bei den Posen, die Posen immer verschieden durchgeführt werden und dennoch die Pose ausführen. So muss die erste Pose mit den armen nach unten neben dem Körper, mal etwas höher, dennoch die gleiche Pose, mal etwas schiefer und versetzt. Durch diese leichten Verschiebungen, wurde der Fehler behoben, dass es nicht zu einer eindeutigen prozentualen Entscheidung der, Teachable Machine kommt, da durch diese strickte Posenführung die Teachable Machine die Pose im Spiel nur richtig erkennt, wenn diese fast immer perfekt ausgeführt wird, was nicht möglich ist, da dies innerhalb 60Sek Spielrunden sehr unwahrscheinlich ist. Die Variation der Datensätze waren also sehr wichtig, damit mit dem Code der Teachable Machine auch weitere gearbeitet werden kann. Ein weiterer Fehler war der Abstand zu der Kamera, dieser musste oft der gleiche sein, da hierbei die Datensätze immer von der gleichen Ferne aufgenommen wurden, was im Nachhinein in der Benutzung ein negativer Aspekt wurde, da es schwer ist die genau Entfernung zu treffen, wenn man das Spiel, spielen möchte.
+
+    Die größte Schwierigkeit bestand in der Einbindung des Codes in die Spielidee. Trotz dessen, dass der Code aus der Teachable Machine kopierbar ist, gab es dennoch Probleme. Die Webcam EEinstellung auf der Internetseite funktionierte nicht. Des Weiteren musste ein Timer so programmiert werden, sodass die Teachable Machine die Posen Erkennung stoppt, sobald der Timer vollendet war.
+Womögliche Gründe weswegen meine Kamera nicht funktionierte und somit auch der Code aus der Teachable Machine nicht funktionieren konnte, sind womögliche Integration der Kamera in VS Code oder Einstellungen in dem Webbrowser, welcher die Kamera nicht aufnehmen ließ.
+   </p>
+   <hr style="border: 2.5px solid rgba(83, 172, 162, 0.273);">
+   <h3> Zukünftige Änderungen des Color-Pose-Games</h3>
+   <p>Erster Punkt, welcher behoben werden sollte, ist die Funktion der Kamera. Des Weiteren würde eine Darstellung der Farbtöne statt der Farbnamen das Design des Spiels verbessern.
+    Das Design des Timers sollte anschaulicher gestaltet werden. Ideen hierbei wären eine andere Schriftart wie bspw. Gill Sans Nova, welche deutlich moderner wirkt. Auch die erste Seite der Website sollte mithilfe von Margin eine bessere Lesbarkeit bekommen, in dem der Rand des Textes nicht bis zum Seitenrand geht und generell die Sätze nicht zu lang sind.</p>
+    </section>
+    <section class="image-gallery">
+        <div class="row">
+            <div class="image-col">
+                <img src="assets/teachable machine beispiel 2.jpg" >
+               
+            </div>
+            <div class="image-col">
+                <img src="assets/teachable machine beispiel.jpg" >
+          
+            </div>
+        </div> 
+    </section>
+    <a href="https://my-teachable-machine.netlify.app">Meine Teachable Machine</a>
+    <script src="index.js"></script> 
+</body>
+</html>

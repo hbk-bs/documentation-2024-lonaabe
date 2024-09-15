@@ -1,17 +1,256 @@
 * {
-  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa,
-    Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri,
-    source-sans-pro, sans-serif;
-  font-weight: bold;
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  font-weight: light;
 }
 body {
-  margin: 0 auto;
-  width: 50vw;
+  margin: 0;
+  padding: 0;
+ background-color: rgb(255, 255, 255);
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+ /* justify-content: center;*/
+ align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  
 }
+strong {
+  color: rgb(16, 153, 191);
+}
+
+
 h1 {
-  font-size: 5vw;
+  font-size: 6vw;
+ 
+  color:rgb(16, 153, 191) ;
+}
+h2 {
+  font-size: 4em;
+  color: rgb(16, 153, 191);
+  text-align: center;
+  margin-top: 50px; /* Abstand nach oben */
+  margin-bottom: 60px 0 20px;
+  margin-left: 0;
+  width: 100%;
+}
+h3{
+  color: rgb(14, 85, 105);
+  font-size: 2em;
+}
+.h1-container{
+  margin-left: 500px;
+  
+
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Abstand zwischen Header und Text/Feldern */
+  width: 100%;
+  padding: 20px;
+}
+.text-container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: links;
+  margin-bottom: 40px 0; /* Abstand zwischen Text und den Farbfeldern */
+  width: 100%;
+}
+
+.container1{
+  width: 50vw;
+  display: flex;
+  flex-direction: column; /* Elemente werden vertikal gestapelt */
+  align-items: center; /* Zentriert den Inhalt horizontal */
+}
+
+
+@media (max-width:320px) {
+  body{
+  background-color: rgb(207, 241, 251);
+  header {
+    color: black
+  }
+}
+
+}
+
+.animate {
+  animation-duration:1s;
+  animation-fill-mode: both;
+}
+
+.animate--infinite {
+  animation-iteration-count: infinite;
+}
+.animate--delay-1s{
+  animation-delay: 1s;
+}
+.animate--fast{
+  animation-duration: 0.3s; 
+}
+.animate--slow{
+  animation-duration:3s;
+}
+@keyframes slideInLeft{ 
+  from{
+transform: translateX(-300px);
+  }
+  to{
+transform: translateX(0);
+  }
+}
+.slideInLeft {
+ animation-name: slideInLeft;
+ animation-timing-function: ease-in-out;
+
+}
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right:500px;
+  margin-top: 30px;
+}
+.logo {
+  width: 100%;
+  font-size: small; /* Größe des Logos anpassen */
+}
+
+.strong {
+  color: rgb(6, 51, 87);
+}
+.button-container {
+  margin-top: 100px; /* Abstand zum Text */
+
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: rgb(16, 153, 191); /* Button-Farbe */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.7s ease;
+}
+
+.button:hover {
+  background-color: rgb(10, 120, 150); /* Button-Farbe beim Hover */
+}
+.Projekte {
+  width: 100%;
+  /*max-width: auto;*/
+  text-align:center;
+ /* padding-top: 50px ;*/
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.Projekte-col {
+  flex-basis: 30%;
+  max-width: 300px; 
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+}
+.Projekte-col img{
+width: 100%;
+border-radius: 10px;
+}
+.image-gallery{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.image.col{
+  flex-basis: 30%; /* Breite der Bilder auf großen Bildschirmen */
+  max-width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.image-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 250px; /* Maximale Breite für die Bilder */}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+ 
+  flex-wrap: wrap; /* Umbrüche bei kleineren Bildschirmen */
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.layer {
+  background:transparent ;
+  height:100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover {
+  background:rgb(159, 252, 249, 0.9) ; 
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+
+}
+/* Stil für den Link */
+/* Stil für den Link */
+
+
+/* Stil für den Link im Hover-Zustand */
+a:hover {
+  background-color: #0056b3; /* Dunklere Hintergrundfarbe beim Überfahren */
+}
+
+
+a:hover {
+  background-color: #0056b3; 
+}
+
+@media (max-width: 768px) {
+  .Projekte-col {
+    flex-basis: 45%; /* Breite der Felder auf Tablets */
+  }
+  .image-col {
+    flex-basis: 48%; /* Breite der Bilder bei mittelgroßen Bildschirmen */
+    max-width: 48%;}
+}
+@media (max-width: 1245px) {
+  .Projekte-col {
+    flex-basis: 100%; 
+  }
+}
+.facilities{
+  width:80%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 100px;
 }
